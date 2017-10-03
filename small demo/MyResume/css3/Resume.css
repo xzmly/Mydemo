@@ -172,10 +172,11 @@ strong{
 	width: 50%;
 }
 .skill h2{
+	font-family: "Arial", "Microsoft YaHei";
 	width: 100%;
 	font-size: 20px;
 	border-bottom: 1px solid #555;
-	padding-bottom: 18.5px;
+	padding-bottom: 19px;
 	margin-bottom: 50px;
 }
 .skill ul li{
