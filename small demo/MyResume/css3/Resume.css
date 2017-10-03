@@ -18,11 +18,11 @@ li{
 }
 @font-face {
   font-family: 'iconfont';  /* project id 433408 */
-  src: url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.eot');
-  src: url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.eot?#iefix') format('embedded-opentype'),
-  url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.woff') format('woff'),
-  url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.ttf') format('truetype'),
-  url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.eot');
+  src: url('//at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.svg#iconfont') format('svg');
 }
 .icon{
 	font-family: "iconfont" !important;
