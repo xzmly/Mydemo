@@ -1,0 +1,194 @@
+body,html,h1,h2,h3,h4,ul,li,div,span{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration:none;
+}
+li{
+	list-style-type:none;
+}
+.clearfix{
+	*zoom:1;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 433408 */
+  src: url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.eot');
+  src: url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.eot?#iefix') format('embedded-opentype'),
+  url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.woff') format('woff'),
+  url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.ttf') format('truetype'),
+  url('http:/at.alicdn.com/t/font_433408_xdm5h8agzvv7k3xr.svg#iconfont') format('svg');
+}
+.icon{
+	font-family: "iconfont" !important;
+	font-size: 30px;
+}
+
+.cantainer{
+	width: 900px;
+	margin: 30px auto 30px auto;
+	padding: 90px;
+	box-shadow:5px 10px 25px #333;
+	font-family: "Arial", "Microsoft YaHei";
+}
+
+.header .my-name{
+	width: 50%;
+	float:left;
+}
+.header{
+	margin-bottom: 20px;
+}
+.my-name .head{
+	display:inline-block;
+	vertical-align: middle;
+	margin-right: 40px;
+	width: 200px;
+	height:200px;
+	border-radius:50%;
+	background:url(http://www.qianyufang.cn/Content/Back/UploadFiles/Product_Small/b7def86e-963f-da37-4efc-f8cff74aa39c.jpg);
+	background-repeat: no-repeat;
+	background-position: 70% 13%;
+}
+.my-name h2{
+	font-size: 30px;
+}
+.my-name p{
+	font-size: 20px;
+	letter-spacing: 8px;
+}
+.my-name .name{
+	vertical-align: middle;
+	display: inline-block;
+}
+.header .my-message{
+	width: 50%;
+	float: right;
+
+}
+.my-message h3{
+	font-size: 30px;
+	padding-bottom: 20px; 
+	border-bottom:4px solid;
+}
+.my-message ul li{
+	letter-spacing: 1px;
+	font-size: 20px;
+	font-weight: 900px;
+	line-height:60px;
+}
+.my-message ul li span{
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	margin-right: 7px;
+}
+.common{
+	margin-bottom: 20px;
+}
+.common h3{
+	font-size: 30px;
+	border-bottom:2px solid #888;
+	padding-bottom:10px;
+	margin-bottom:40px;
+	width:500px;
+	font-weight: 5000px;
+}
+.common ul{
+	font-size: 22px;
+	border-left:4px solid #1D9ABF;
+	padding-left:50px; 
+}
+.common ul li{
+	margin-bottom: 30px;
+	position: relative;
+	top: -13px;
+}
+.common ul li:before{
+	vertical-align: middle;
+	position: relative;
+	left: -50px;
+	content:"";
+	display: inline-block;
+	margin-left: -10px;
+	width: 15px;
+	height:15px;
+	background:#1D9ABF;
+	border-radius:50%;
+}
+strong{
+	font-weight: bolder;
+	font-size: 25px;
+	color: #2084A2;
+}
+
+.footer{
+	margin-top: 50px;
+}
+.footer .activity{
+	float: left;
+	width: 40%;
+	margin-right: 60px;
+}
+.box{
+	margin-bottom: 50px;
+}
+.box h2{
+	width: 100%;
+	font-size: 20px;
+	border-bottom: 1px solid #555;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.box h3,.box p{
+	margin-left: 20px;
+}
+.box h3{
+	font-size: 25px;
+}
+.box p{
+	font-size: 20px;
+}
+.box h3:before{
+	vertical-align: middle;
+	position: relative;
+	left: -17px;
+	content:"";
+	display: inline-block;
+	margin-left: -10px;
+	width: 15px;
+	height:15px;
+	background:#1D9ABF;
+	border-radius:50%;
+}
+
+.footer .skill{
+	float: left;
+	width: 50%;
+}
+.skill h2{
+	width: 100%;
+	font-size: 20px;
+	border-bottom: 1px solid #555;
+	padding-bottom: 18px;
+	margin-bottom: 50px;
+}
+.skill ul li{
+	font-size: 25px;
+	margin-bottom: 50px;
+}
+.skill ul li:before{
+	content: '\e62f';
+	margin-right: 10px;
+}
+.skill .left-skill{
+	float: left;
+}
+.skill .right-skill{
+	float: right;
+}
