@@ -1,0 +1,39 @@
+#omit{
+}
+.commer-span{
+	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0 auto 30px auto;
+}
+.list-wrap{
+	max-width: 1180px;
+	margin: 150px auto 0 auto;
+}
+.list-wrap ul li{
+	margin-left: 30px;
+	width: 350px;
+	display: inline-block;
+	float: left;
+}
+.left-span{
+	background: url(http://c.hiphotos.baidu.com/image/crop%3D0%2C0%2C492%2C448/sign=65563254d033c895b231c23bec235fc0/962bd40735fae6cd11fbeea206b30f2443a70fa1.jpg);
+	background-repeat: no-repeat;
+	background-position:46% 10%; 
+}
+.right-span{
+	background: url(http://i.38mhw.com/ixw201509/0001595.jpg);
+	background-repeat: no-repeat;
+	background-position:11% 10%; 
+	background-size:200%;
+}
+.mid-span{
+	background: url(http://pic.wehefei.com/0/02/61/89/2618969_647795.jpg);
+	background-repeat: no-repeat;
+	background-position:21% 7%; 
+	background-size:200%;
+}
+.list-wrap ul li h3{
+	padding-bottom: 20px;
+}

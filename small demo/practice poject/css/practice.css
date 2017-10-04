@@ -1,0 +1,97 @@
+body,html,div,h1,h2,h3,h4,h5,h6,ul,li,span,p{
+	margin: 0;
+	padding:0;	
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body{
+	font-size: 20px;
+}
+a{
+	color: #222;
+	text-decoration: none;
+}
+a,span{
+	color: #fff;
+	display: block;
+}
+li{
+	list-style-type:none;
+}
+.crealfix{
+	*zoom:1;
+}
+.crealfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.commer{
+	min-height: 800px;
+}
+.commer-width{
+	max-width: 1180px;
+	margin: 0 auto;
+	text-align: center;
+}
+.commer-h2{
+	padding: 80px 0 30px 0;
+}
+
+
+/*nav开始*/
+header{
+	min-height: 800px;
+	background: url(http://img22.mtime.cn/up/2010/12/30/213927.63767449_o.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+header nav{
+	height: 80px;
+	line-height: 80px;
+	max-width: 1080px;
+}
+nav .logo{
+	text-align: center;
+	font-size: 35px;
+	width: 250px;
+	float: left;
+}
+nav .wrap{
+	text-align: center;
+	float: right;
+}
+nav .wrap li{
+	display: inline-block;
+}
+nav .wrap li a{
+	width: 80px;
+}
+/*nav结束*/
+
+
+
+/*banner 开始*/
+#banner{
+	color: #fff;
+	text-align: center;
+}
+#banner h2{
+	font-size: 50px;
+	padding-top:300px;
+	padding-bottom: 30px;
+}
+#banner h1{
+	font-size: 35px;
+	padding-bottom: 40px;
+}
+#banner .more-button input{
+	color: #fff;
+	border:0;
+	border-radius:5px;
+	font-size:25px;
+	padding:20px 50px;
+	background:#fd8863;
+}
+/*banner 结束*/
+
