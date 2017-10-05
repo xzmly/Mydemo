@@ -28,70 +28,51 @@ li{
 .commer{
 	min-height: 800px;
 }
-.commer-width{
-	max-width: 1180px;
-	margin: 0 auto;
-	text-align: center;
-}
 .commer-h2{
 	padding: 80px 0 30px 0;
 }
 
 
-/*nav开始*/
 header{
-	min-height: 800px;
-	background: url(http://img22.mtime.cn/up/2010/12/30/213927.63767449_o.jpg);
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507178469245&di=8a3993c37267a01ccba49dcbad8c73c1&imgtype=0&src=http%3A%2F%2Fimg22.mtime.cn%2Fup%2F2010%2F12%2F30%2F213927.63767449_o.jpg);
 	background-repeat: no-repeat;
+	background-position:center center;  
 	background-size: cover;
-	background-position: center;
 }
-header nav{
-	height: 80px;
+nav{
 	line-height: 80px;
-	max-width: 1080px;
+	min-width: 800px;
+	height: 80px;
 }
 nav .logo{
-	text-align: center;
-	font-size: 35px;
-	width: 250px;
+	margin-left: 30px;
+	font-size: 30px;
 	float: left;
 }
 nav .wrap{
-	text-align: center;
 	float: right;
 }
-nav .wrap li{
+.wrap li{
+	margin-right: 30px;
 	display: inline-block;
 }
-nav .wrap li a{
-	width: 80px;
-}
-/*nav结束*/
-
-
-
-/*banner 开始*/
 #banner{
 	color: #fff;
 	text-align: center;
 }
 #banner h2{
-	font-size: 50px;
-	padding-top:300px;
-	padding-bottom: 30px;
+	font-size: 40px;
+	padding-top: 200px;
+	padding-bottom: 20px;
 }
 #banner h1{
-	font-size: 35px;
-	padding-bottom: 40px;
+	font-size: 30px;
+	padding-bottom:100px;
 }
-#banner .more-button input{
-	color: #fff;
-	border:0;
-	border-radius:5px;
-	font-size:25px;
-	padding:20px 50px;
-	background:#fd8863;
+.more-button input{
+	border: 0;
+	background: #ff9800;
+	font-size: 25px;
+	padding: 20px 50px;
+	border-radius: 5px;
 }
-/*banner 结束*/
-
