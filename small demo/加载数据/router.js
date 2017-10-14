@@ -1,4 +1,4 @@
- app.get('//loadMore',function(req,res){
+ app.get('/2.php',function(req,res){
 
  	var curIdx = req.query.index
  	var len = req.query.length
