@@ -1,4 +1,4 @@
- app.get('http://loadMore',function(req,res){
+ app.get('//loadMore',function(req,res){
 
  	var curIdx = req.query.index
  	var len = req.query.length
