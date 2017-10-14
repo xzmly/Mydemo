@@ -1,6 +1,6 @@
 
 		$("#btn").addEventListener('click',function(){
-			cantainer.ajax("/2.php?index="+cantainer.indexNum+"&length=5",
+			cantainer.ajax("/loadMore?index="+cantainer.indexNum+"&length=5",
 				function(obj){
 					//成功时候你想干什么
 					cantainer.addContent(obj)
