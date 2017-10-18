@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body,html,div,ul,li{
+			border:0;
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			cursor: pointer;
+			list-style-type: none;
+			border:1px solid;
+			margin-bottom:20px;
+			padding:30px; 
+		}
+		li:hover{
+			background: green; 
+		}
+		button{
+			padding:20px;
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="cantainer">
+		<ul>
+			<li>链接1</li>
+			<li>链接2</li>
+			<li>链接3</li>
+			<li>链接4</li>
+		</ul>
+		<button class="btn">加载更多</button>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		var num = 5
+		// $('.btn').on('click',function(){
+		// 	$.get('/getNews',{index:num,length:5}).done(function(news){
+		// 		console.log(news.arr)
+		// 		appendHtml(news.arr)
+		// 	}).fail(function(){
+		// 		console.log('一场')
+		// 	})
+		// })
+	$('.btn').on('click',function(){	
+		$.ajax({
+			url:'/getNews',
+			method:'get',
+			dataType:'json',
+			data:{
+				index:num,
+				length:4
+			},
+			success:function(ret){
+				console.log(ret.arr)
+				appendHtml(ret.arr)
+			},
+			error:function(){
+				console.log('失败')
+			}
+		})
+	})	
+
+		function appendHtml(ret){
+			$(ret).each(function(index,node){
+				console.log(this)
+				var $li=$('<li>'+this+'</li>')
+				$('ul').append($li)
+			})
+
+			num += 5
+		}
+	</script>
+</body>
+</html>
