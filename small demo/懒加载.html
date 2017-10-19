@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.cantainer{
+  			width:500px;
+  			margin:0 auto;
+  			border:1px solid #222;
+		}
+		img{
+			width: 240px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="cantainer">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+	   	<img src="">
+  </div>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		var arr=[
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508396883899&di=9b63b141fb7dd3b1f1464625c8de42e0&imgtype=0&src=http%3A%2F%2Fdocs.ebdoor.com%2FImage%2FCompany%2F385%2F3850638_logo.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562723&di=139243f4f169574c11788253d1d0e8c5&imgtype=0&src=http%3A%2F%2Fwww.woshipm.com%2Fwp-content%2Fuploads%2F2013%2F01%2F7a5615f2266bf93c7720125954f58bf8.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562723&di=917130d0fa0a7e2ce68a98041f70017c&imgtype=0&src=http%3A%2F%2Fimg007.hc360.cn%2Fg6%2FM01%2F42%2F9F%2FwKhQsVPWJv6EJKgoAAAAAOr_3Z4180.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562723&di=45d03a86ad8fb1433777d8feabec8572&imgtype=0&src=http%3A%2F%2Fimg009.hc360.cn%2Fhb%2FMTQ1ODkyODgwNTI1OS0xOTgzMjA3MDA0.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562722&di=590a925f56c7756895838977fb43eb8d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fbaike%2Fpic%2Fitem%2Ff3d3572c11dfa9eccde882a363d0f703908fc144.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562722&di=d369c0da3c720de627a583a227f66903&imgtype=0&src=http%3A%2F%2Fimage.it168.com%2Fn%2F0x0%2F5%2F5364%2F5364335.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562722&di=d41473eeb2f27dbab792ef0575cd83a4&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fd01373f082025aaf5d53a7e3f0edab64034f1ab1.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562721&di=008bccafb41e506e91e41a8cba53ca6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161220%2F5d492d406e024ff4b0b22ae3e5edb409_th.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562720&di=710b1d902f873560bd44b518350b6ea7&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D128137a0af86c91708565a3dfc0d5cf9%2F30adcbef76094b362be4c8b5abcc7cd98d109d70.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562720&di=1323753a841fb864074d23501d968dbe&imgtype=0&src=http%3A%2F%2Fimgbbsw.baidu.com%2Fdata%2Fportal%2F201511%2F18%2F120728icaccijcap7gmdy9.png",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562720&di=b1aca11dd47723d22016e346f89450d5&imgtype=0&src=http%3A%2F%2Fimg1.nlrsq.com%2Fupfile%2F509b9fcb39dbb6fd00ceb4760e24ab18962b378d.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562720&di=08f0e86fd93e9fb8a65cde69af370eee&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fbaike%2Fc0%253Dbaike272%252C5%252C5%252C272%252C90%253Bt%253Dgif%2Fsign%3Daf1491563901213fdb3e468e358e5db4%2F32fa828ba61ea8d3df1bd18b970a304e251f5807.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562720&di=be21b194ef174ee250af42f2ee234e94&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F65%2F71%2F76Z58PICQkI_1024.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562719&di=84ce848e923b112a2071a84157ed9c35&imgtype=0&src=http%3A%2F%2Fwww.iapply.cn%2FPublic%2FImage%2F20140219%2Fimage_530411181e7dd.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508397934945&di=10013351623476411d6009f2af4cb90f&imgtype=0&src=http%3A%2F%2Fimages.mac.xunlei.com%2F201311%2Fx_52899a66ca4c0eb_256x256x32.png",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508400562719&di=f41714817ed8b3139a7ee114618dc588&imgtype=0&src=http%3A%2F%2Fwww.lgstatic.com%2Fthumbnail_600x360%2Fi%2Fimage%2FM00%2F31%2F11%2FCgqKkVdJE9mAPnBbAAFiY-fByjE117.png"
+		]
+
+		var clock
+
+		scrollShowImg()
+	$(window).on('scroll',function(){
+		if(clock){
+			clearTimeout(clock)
+		}
+		clock = setTimeout(function(){
+			scrollShowImg()
+		},200)
+	})
+
+	//窗口滚动的时候执行函数
+	function scrollShowImg(){
+		$('img').each(function(){
+			if(cheackImg($(this)) && !loadImg($(this))){
+				showImg($(this))
+			}
+		})
+	} 
+
+	//检查元素是否出现在窗口
+	function cheackImg($this){
+		//获取窗口的高度
+	  var windowHeight = $(window).height()
+	  //获取滚动的高度
+	  var scrollHeight = $(window).scrollTop()
+	  //获取当前img的高度
+	  var offsetTop = $this.offset().top
+	  if(offsetTop < windowHeight + scrollHeight && offsetTop > scrollHeight){
+	  	return true
+	  } 
+	  return false
+	}
+
+	//查看img src属性是否为空
+	function loadImg($this){
+	  return $this.attr('src') === undefined
+	}
+
+	//遍历数组，把对应的图片，放到对应的图片上
+	function showImg($this){
+		//遍历数组
+	  arr.forEach(function(index,node){
+	  	//获取当前IMG是第几个
+	  	var num = $this.index()
+	  	//如果img当前的位置数 === 数组的对应位置数
+	  	if (num===node) {
+	  		//就把地址传入到src中
+	  		var num = $this.index()
+	  		$this.attr('src',index)
+	  	}
+	  })
+	}
+	</script>
+</body>
+</html>
