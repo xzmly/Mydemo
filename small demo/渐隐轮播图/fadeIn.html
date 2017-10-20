@@ -84,22 +84,22 @@
 <body>
 	<div class="cantainer">
     <ul class="wrap">
-      <li index="0">
+      <li index="0" class="none">
         <a href="javascript:;">
           <img src="http://cdn.jirengu.com/book.jirengu.com/img/23.jpg" alt="">
         </a>
       </li>
-      <li index="1">
+      <li index="1" class="none">
         <a href="javascript:;">
           <img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt="">
         </a>
       </li>
-      <li index="2">
+      <li index="2" class="none">
         <a href="javascript:;">
           <img src="http://cdn.jirengu.com/book.jirengu.com/img/25.jpg" alt="">
         </a>
       </li>
-      <li index="3">
+      <li index="3" class="none">
         <a href="javascript:;">
           <img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt="">
         </a>
@@ -117,84 +117,85 @@
     </ul>
   </div>
 	<script src="jquery-3.2.1.min.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript">		
 		var $wrap = $('.wrap')
-		var $imgLi = $('.wrap>li')
-		var $bullet = $('.bullet>li')
-		var $btn = $('.btn')
-		var liWidth = $imgLi.width()
-		var liLength = $imgLi.length
-		var nowLiLength = $('.wrap>li').length
-		$wrap.width(liWidth*nowLiLength)
-		//$wrap.css({left:-liWidth})
-		$('.wrap>li').eq(nowLiLength-nowLiLength).siblings().hide()
+			$image = $('.wrap>li')
+			$right = $('.right')
+			$left = $('.left')
+			$bullet = $('.bullet>li')
+			imageLength = $image.length
 
 		var num = 0
+		var isAnimate = false
 
+		autoPlay()
+		play(0)
+		$right.on('click',function(){
+			moveRight()
+		})
+
+		$left.on('click',function(){
+			moveLeft()
+		})
 
 		$bullet.on('click',function(){
-			showBullet($(this))
-			bulletMoveImg($(this))
+			setbullet($(this))
+			play($(this).index())
 		})
-
-		$btn.on('click','a',function(){
-			move($(this))
-		})
-
-
-
-		function move($this){
-			if ($this.hasClass('right')) {
-				moveRight()
-			}else{
-				moveLeft()
-			}
-		}
-
-		function bulletMoveImg($this){
-		 	var index = $this.index()
-		 	$imgLi.eq(index).fadeIn(500)
-		 	$imgLi.eq(index).siblings().hide()
-		 	num = index
-		 }
-
-		function moveLeft(){
-			num--
-			if (num < 0) {
-				$imgLi.eq(0).hide()
-				$imgLi.eq(liLength-1).fadeIn(500)
-				num = liLength-1
-			}else{
-				$imgLi.eq(num+1).hide()
-				$imgLi.eq(num).fadeIn(500)
-			}
-			showBullet()
-		}
 
 		function moveRight(){
-			num++
-			if (num === liLength) {
-				$imgLi.eq(liLength-1).hide()
-				$imgLi.eq(0).fadeIn(500)
-				num = 0
-			}else{
-				$imgLi.eq(num).fadeIn(500)
-				$imgLi.eq(num-1).hide()
-			}
-			showBullet()
+			play((num+1)%imageLength)
 		}
 
-		function showBullet($this){
-			if (arguments.length == 0) {
-				$bullet.removeClass('active')
+		function moveLeft(){
+			play((imageLength+num-1)%imageLength)
+		}
+
+		function play(index){
+			if (isAnimate)return;
+			isAnimate = true
+			$image.eq(num).hide();
+			$image.eq(index).fadeIn(500,function(){
+				isAnimate = false
+			})
+			num = index
+			setbullet()
+		}
+
+		function setbullet($this){
+			if (arguments.length === 0) {
+				$bullet.eq(num).siblings().removeClass('active')
 				$bullet.eq(num).addClass('active')
 			}else{
-				console.log(2)
 				$this.siblings().removeClass('active')
 				$this.addClass('active')
 			}
 		}
-		
+
+		var time
+		function autoPlay(){
+			time = setInterval(function(){
+				moveRight()
+			},3500)
+		}
+
+		$wrap.on('mouseenter',function(){
+			clearInterval(time)
+		}).on('mouseleave',function(){
+			autoPlay()
+		})
+
+
+		//把全部图片设置为none
+		//设置一个全局变量num
+		// 右边点击的时候img 为num+1当加到时，就是加到img.length数目
+		//的时候，就回到零    (num+1)%4	
+		//左边点击的时候 img会 num-1，当减到0的时候，num会变为img.length-1
+		//(img.length-num+1)%img.length
+
+		//分别吧这两个值传入到函数中
+		//num隐藏 num+1 或者 num-1显示
+		//最后把index传给num
 	</script>
 </body>
 </html>
