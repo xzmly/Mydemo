@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body,html,h1,h2,h3,h4,h5,div,span,ul,li,a,img{
+  			border:0;
+  			margin:0;
+  			padding:0;
+		}
+		a{
+		  text-decoration:none;
+		}
+		img{
+		  width:380px;
+		  height:230px;
+		}
+		.cantainer{
+		  position:relative;
+		  z-index:1;
+		  margin:50px auto;
+		  width:380px;
+		  height:230px;
+		  overflow:hidden;
+		}
+		.wrap{
+		  position:absolute;
+		  z-index:2;
+		  width:1520px;
+		  overflow:hidden;
+		}
+		.wrap li{
+		  display:inline-block;
+		  float:left;
+		}
+		.btn a{
+		  color:#fff;
+		  position:absolute;
+		  z-index:2;
+		  top:50%;
+		  margin-top:-15px;
+		  border:1px solid #fff;
+		  border-radius:50%;
+		  text-align:center;
+		  line-height:30px;
+		  width:30px;
+		  height:30px;
+		  font-weight:800px;
+		}
+		.btn a:first-child{
+		  left:10px;
+		}
+		.btn a:last-child{
+		  right:10px;
+		}
+
+		.bullet{
+		  position:absolute;
+		  bottom:10px;
+		  z-index:2;
+		  text-align:center;
+		  width:100%;
+		  line-height:0;
+		  font-size:0;
+		}
+		.bullet>li{
+			cursor: pointer;
+		  display:inline-block;
+		  width:30px;
+		  height:5px;
+		  margin:0 5px;
+		  border:1px solid #ccc;
+		  border-radius:5px;
+		}
+		.active{
+		  background:red;
+		}
+	</style>
+</head>
+<body>
+	<div class="cantainer">
+    <ul class="wrap">
+      <li index="0">
+        <a href="javascript:;">
+          <img src="http://cdn.jirengu.com/book.jirengu.com/img/23.jpg" alt="">
+        </a>
+      </li>
+      <li index="1">
+        <a href="javascript:;">
+          <img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt="">
+        </a>
+      </li>
+      <li index="2">
+        <a href="javascript:;">
+          <img src="http://cdn.jirengu.com/book.jirengu.com/img/25.jpg" alt="">
+        </a>
+      </li>
+      <li index="3">
+        <a href="javascript:;">
+          <img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt="">
+        </a>
+      </li>
+    </ul>
+    <div class="btn">
+      <a href="javascript:;" class="left"><</a>
+      <a href="javascript:;" class="right">></a>
+    </div>
+    <ul class="bullet">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+
+		//克隆图片，一前一后
+		var $wrap = $('.wrap')
+		var $image = $('.wrap>li')
+		$wrap.append($image.first().clone())
+		$wrap.prepend($image.last().clone())
+		//调整wrap的宽度
+		var imageWidth = $image.width()
+		var imageLength = $image.length//没有增加图片的数量
+		var newImageLength = $('.wrap>li').length//增加图片后的数量
+		$wrap.width(imageWidth*newImageLength)
+		//调整wrap的left，显示第一张图片
+		$wrap.css({left:-imageWidth})
+
+		var $bulletLi = $(".bullet>li")
+		var num = 0
+		var lock = false;//锁
+
+
+		//当left按钮被点击时
+		$(".left").on('click',function(){
+			moveLeft()
+		})
+		//当right按钮被点击时
+		$(".right").on('click',function(){
+			moveRight()
+		})
+		//点击小按钮时候
+		$bulletLi.on('click',function(){
+			showBullet($(this))
+			bulletLiMoveImg($(this))
+		})
+
+		//小按钮控制图片移动
+		function bulletLiMoveImg($this){
+			var bulletIndex = $this.index()
+			var move = (bulletIndex+1)*-imageWidth
+			if (lock) return
+				lock = true
+			$wrap.animate({left:move},function(){
+				num = bulletIndex
+			})
+			lock = false
+		}
+
+		function moveLeft(){
+			if (lock)return
+				lock = true
+			$wrap.animate({left:"+="+imageWidth},function(){
+				num--
+				if (num < 0) {
+					$wrap.css({left:imageWidth*-imageLength})
+					num = imageLength-1
+				}
+				showBullet()
+				lock = false
+			})
+		}
+
+		function moveRight(){
+			if (lock)return
+				lock = true
+			$wrap.animate({left:"-="+imageWidth},function(){
+				num++
+				if (num == imageLength) {
+					$wrap.css({left:-imageWidth})
+					num = 0
+				}
+				showBullet()
+				lock = false
+			})
+		}
+
+		function showBullet($this){
+			if (arguments.length == 0) {
+				$bulletLi.removeClass('active')
+				$bulletLi.eq(num).addClass('active')
+			}else{
+				$this.siblings().removeClass('active')
+				$this.addClass('active')
+			}
+
+		}
+
+
+	</script>
+</body>
+</html>
