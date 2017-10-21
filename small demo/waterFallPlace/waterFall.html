@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="utf-8">
+	<title>瀑布流</title>
+	<style type="text/css">
+		.content{
+			position:relative;
+			width: 100%;
+		}
+
+		.item{
+			position: absolute;
+			width: 200px;
+			margin-right:10px;
+			margin-top:10px;
+			transition: all .2s;
+		}
+		.h1{
+			height:200px;
+			background: #f4b300;
+		}
+		.h2{
+			height: 300px;
+			background: #691bbb;
+		}
+		.h3{
+			height:400px;
+			background: #006ac1;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="item h1">1</div>
+		<div class="item h2">2</div>
+		<div class="item h3">3</div>
+		<div class="item h1">4</div>
+		<div class="item h2">5</div>
+		<div class="item h3">6</div>
+		<div class="item h2">7</div>
+		<div class="item h1">8</div>
+		<div class="item h3">9</div>
+		<div class="item h2">10</div>
+		<div class="item h3">11</div>
+		<div class="item h1">12</div>
+		<div class="item h1">13</div>
+		<div class="item h3">14</div>
+		<div class="item h2">15</div>
+		<div class="item h3">16</div>
+		<div class="item h1">17</div>
+	</div>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		waterFull()
+		$(window).resize(function(){
+			waterFull()
+		})
+		 function waterFull(){
+		 	var colNum = parseInt($('.content').width()/$('.item').width())
+		 	var arr = []
+			 for(var i = 0; i < colNum; i++){
+			 	arr[i]=0
+			 }
+
+			 $('.item').each(function(){
+			 	var min = Math.min.apply(null,arr)
+			 	var minIndex = arr.indexOf(min)
+			 	$(this).css({
+			 		top:arr[minIndex],
+			 		left:minIndex*$(this).outerWidth(true)
+			 	})
+			 	arr[minIndex]+=$(this).outerHeight(true)	 
+			 })
+		 }
+//数组有多少个值 等于 页面可以放多少个元素
+//元素top定位值等于数组的最小值
+//元素left定位值等于数组的最小值的下标
+//元素top定位值等于数组的最小值的时候，要把元素本身的高度加上去数组的最小值中
+	</script>
+</body>
+</html>
