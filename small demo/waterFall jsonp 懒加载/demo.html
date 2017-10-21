@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="utf-8">
+	<title>瀑布流 jsonp 懒加载</title>
+	<style type="text/css">
+		body,html,ul,li,div,span,a,img,h4,p{
+			border:0;
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style-type:none;
+		}
+		a{
+			display: block;
+			text-decoration:none;
+			color:#222;
+		}
+		.load{
+			background: red;
+		}
+		.cantainer{
+			width: 900px;
+			margin:0 auto;
+		}
+		.wrap{
+			position: relative;
+		}
+		.wrap .item{
+			position: absolute;
+			padding:5px;
+			border: 1px solid #999;
+			margin: 10px;
+			border-radius:5px;
+			text-align: center;
+			width: 260px;
+			box-shadow: 1px 1px 5px #555;
+		}
+		.item a img{
+			width: 250px;
+		}
+		.item h4{
+			border-bottom:1px solid #888;
+			padding-bottom:5px;
+			margin: 0 0 10px 6px; 
+			text-align: left;
+		}
+		.item p{
+			margin-left: 6px;
+			text-align: left;
+		}
+		.none{
+			display: none;
+		}
+		.load{
+			/*//visibility: hidden;*/
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="cantainer">
+		<ul class="wrap">
+			<!-- <li class="item">
+				<a href="">
+					<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508602848225&di=c172be6ce3b5cbf11919b2e37fd395ce&imgtype=0&src=http%3A%2F%2Fcdn103.img.lizhi.fm%2Faudio_cover%2F2016%2F06%2F10%2F29150394568803079_320x320.jpg">
+					<h4>Lorem ipsum dolor sit amet, consectetur</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur</p>
+				</a>
+			</li> -->
+			<li class="item none"></li>
+		</ul>
+		<div class="load">i am hidden</div>
+	</div>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="commer.js"></script>	
+</body>
+</html>
