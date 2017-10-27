@@ -3,11 +3,11 @@
 }
 @font-face {
     font-family: 'xxx';  /* project id 433791 */
-    src: url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.eot');
-    src: url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.eot?#iefix') format('embedded-opentype'),
-    url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.woff') format('woff'),
-    url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.ttf') format('truetype'),
-    url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_433791_04xr03o82h4lhaor.eot');
+    src: url('//at.alicdn.com/t/font_433791_04xr03o82h4lhaor.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_433791_04xr03o82h4lhaor.woff') format('woff'),
+    url('//at.alicdn.com/t/font_433791_04xr03o82h4lhaor.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_433791_04xr03o82h4lhaor.svg#iconfont') format('svg');
 }
 .icon{
     font-family: "xxx";
