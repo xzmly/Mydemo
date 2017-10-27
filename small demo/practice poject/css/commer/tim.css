@@ -1,0 +1,52 @@
+#tim{
+    background: #f1f1f1;
+}
+@font-face {
+    font-family: 'xxx';  /* project id 433791 */
+    src: url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.eot');
+    src: url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_433791_04xr03o82h4lhaor.svg#iconfont') format('svg');
+}
+.icon{
+    font-family: "xxx";
+}
+
+.tim-cantainer{
+    text-align: center;
+    width: 1080px;
+    margin: 0 auto;
+}
+.tim-cantainer h2{
+    padding: 50px;
+}
+.tim-cantainer ul{
+    padding-top: 80px;
+}
+.tim-cantainer ul li{
+    margin-left: 80px;
+    float: left;
+}
+.tim-cantainer ul li img{
+    margin-bottom: 50px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border:7px solid #f1f1f1;
+}
+.tim-cantainer ul li span{
+    overflow: hidden;
+    font-size: 40px;
+    font-family: "xxx";
+    margin-left: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #222;
+}
+.tim-cantainer ul li span:hover{
+    background: #999;
+}
