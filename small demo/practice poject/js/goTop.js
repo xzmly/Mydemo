@@ -1,7 +1,6 @@
 var _goTop = (function (){
     function GoTop(ct){
         this.ct = document.querySelector(ct)
-        console.log(this.ct)
         this.target = document.createElement('button')
         this.bindEvent()
         this.createNode()
@@ -18,7 +17,6 @@ var _goTop = (function (){
         var _this = this
         window.onscroll = function(){
             if(window.scrollY >= 600){
-                console.log(_this)
                 _this.target.innerText = "Go to top"
                 _this.target.classList.add('main')
                 _this.ct.appendChild(_this.target)
