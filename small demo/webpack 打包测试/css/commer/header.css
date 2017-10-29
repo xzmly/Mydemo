@@ -1,0 +1,32 @@
+header{
+    min-height:800px;
+    background:#222;
+}
+header nav{
+    position:fixed;
+    z-index:3;
+    left:50%;
+    margin-left:-540px;
+    height:100px;
+}
+nav .header-wrap{
+    min-width:1080px;
+    background:rgba(0,0,0,0.3);
+}
+.header-wrap ul>li{
+    text-align:center;
+    line-height:80px;
+    float:right;
+    display:inline-block;
+}
+.header-wrap ul>li>a{
+    display:block;
+    width:80px;
+    color:#fff;
+}
+.header-wrap ul>li>a:hover{
+    background:rgba(0,0,0,0.9);
+}
+.header-wrap .logo{
+    float:left;
+}

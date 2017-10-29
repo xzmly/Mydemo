@@ -1,0 +1,37 @@
+#water-full{
+    min-height:850px;
+    background:#EDECED;
+}
+.water-wrap{
+    width:1080px;
+    margin:0 auto;
+}
+.img-list{
+    position:relative;
+    background:red;
+}
+
+.img-list li{
+    margin:15px 20px;
+    width:310px;
+    position:absolute;
+}
+
+.img-list li img{
+    width:310px;
+}
+
+
+.water-add{
+    display:block;
+    margin:20px auto;
+    padding:15px 50px;
+    border:0;
+    border-radius:5px;
+    font-size:20px;
+    color:#fff;
+    background:orange;
+}
+.none{
+     visibility: hidden;
+ }
